@@ -1,20 +1,23 @@
 import pytest
 from lib.fizzbuzz import *
 
-def test_PepsiCoke(num):
-    if num == 1:
-        assert "1"
-    elif num == 2:
-        assert "2"
+def test_1():
+    assert PepsiCoke(1) == "1"
 
-    elif num % 3 == 0 and num % 5 == 0:
-        assert "PepsiCoke"
+def test_2():
+    assert PepsiCoke(2) == "2"
 
-    elif num % 3 == 0:
-        assert "Pepsi"
+def test_3():
+    assert PepsiCoke(3) == "Pepsi"
 
-    elif num % 5 == 0:
-        return "Coke"
-        
-    else:
-        return None
+def test_4():
+    assert PepsiCoke(5) == "Coke"
+
+def test_5():
+    assert PepsiCoke(6) == "Pepsi"
+
+def test_6():
+    assert PepsiCoke(10) == "Coke"
+
+def test_7():
+    assert PepsiCoke(15) == "PepsiCoke"
